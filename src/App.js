@@ -1,5 +1,6 @@
-import React, { Component } from 'react';
-import logo from './logo.svg';
+import React, {Component} from 'react';
+import UploadSmms from './Upload';
+import Preview from './Preview';
 import './App.css';
 
 class App extends Component {
@@ -7,20 +8,35 @@ class App extends Component {
     super(props);
     this.state = {
       destroyed: false,
+      fileList: []
     };
   }
+
   destroy = () => {
     this.setState({
-      destroyed: true,
+      destroyed: true
     });
   }
+
+  uploadFileList = (file) => {
+    const {fileList} = this.state;
+    this.setState({
+      fileList: [
+        ...fileList,
+        file
+      ]
+    });
+  }
+
   render() {
-    if (this.state.destroyed) {
+    const {fileList, destroyed} = this.state;
+    if (destroyed) {
       return null;
     }
     return (
       <div className="App">
-        <img src={logo} className="App-logo" alt="logo" />
+        <UploadSmms onFileUploadSuccess={this.uploadFileList} />
+        <Preview fileList={fileList} />
       </div>
     );
   }
