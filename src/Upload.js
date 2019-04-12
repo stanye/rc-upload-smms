@@ -53,25 +53,23 @@ export default class UploadSmms extends Component {
 
   render() {
     return (
-      <div>
-        <span
-          role="button"
-          tabIndex={0}
-          className="upload-button"
-          onClick={this.clickUpload}
-        >
-          <input
-            type="file"
-            accept="image/*"
-            multiple
-            style={{display: 'none'}}
-            onChange={this.onChange}
-            ref={this.saveUploader}
-          />
-          <button type="button">
-            <span>点击上传</span>
-          </button>
-        </span>
+      <div
+        role="button"
+        tabIndex={0}
+        className="upload-button"
+        onClick={this.clickUpload}
+      >
+        <input
+          type="file"
+          accept="image/*"
+          multiple
+          style={{display: 'none'}}
+          onChange={this.onChange}
+          ref={this.saveUploader}
+        />
+        <button type="button">
+          <span>+ 点击上传</span>
+        </button>
       </div>
     );
   }
