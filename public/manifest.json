@@ -1,6 +1,6 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
+  "short_name": "react-img-upload-sm.ms",
+  "name": "React Upload Image To SM.MS",
   "icons": [
     {
       "src": "favicon.ico",
