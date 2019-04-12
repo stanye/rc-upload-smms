@@ -89,7 +89,7 @@
   "bugs": {
     "url": "https://github.com/stanye/rc-upload-smms/issues"
   },
-  "homepage": "https://github.com/stanye/rc-upload-smms#readme",
+  "homepage": "https://stanye.com/rc-upload-smms",
   "lint-staged": {
     "**/*.{js,jsx}": [
       "eslint",
