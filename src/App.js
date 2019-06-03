@@ -19,7 +19,6 @@ class App extends Component {
   }
 
   uploadFileList = (file) => {
-    console.log('file: ', file);
     const {fileList} = this.state;
     this.setState({
       fileList: [

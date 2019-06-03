@@ -6,6 +6,23 @@ branches:
         - master
         - /^greenkeeper/.*$/
 install:
-    - npm install
+    - yarn
 script:
-    - npm build
+    - yarn build
+after_script:
+  - git clone ${GH_URL} pub_web
+  - cd pub_web
+  - git config user.name "${U_NAME}"
+  - git config user.email "${U_EMAIL}"
+  - rm -rf pages
+  - mkdir pages
+  - cp -rf ../build/* pages/
+  - git add .
+  - git commit -m "Travis CI Auto Builder :$(date '+%Y-%m-%d %H:%M:%S' -d '+8 hour')"
+  - git push "https://${GH_TOKEN}@${GH_REF}" master:${P_BRANCH}
+# E: Build LifeCycle
+
+#指定分支，只有指定的分支提交时才会运行脚本
+branches:
+  only:
+    - master
