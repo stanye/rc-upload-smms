@@ -46,7 +46,7 @@
     "prop-types": "^15.7.2",
     "qrcode.react": "^1.0.0",
     "react": "^16.8.6",
-    "react-app-polyfill": "^1.0.1",
+    "react-app-polyfill": "^1.0.6",
     "react-dev-utils": "^9.0.1",
     "react-dom": "^16.8.6",
     "resolve": "1.11.1",
